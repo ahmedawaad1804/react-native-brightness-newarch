@@ -1,5 +1,5 @@
 {
-  "name": "react-native-restart-newarch",
+  "name": "react-native-brightness-newarch",
   "version": "1.0.85",
   "description": "Restart the app for new architecture",
   "license": "MIT",
@@ -18,7 +18,7 @@
   "keywords": [
     "react-native",
     "restart",
-    "react-native-restart-newarch",
+    "react-native-brightness-newarch",
     "react-native-restart",
     "newarch",
     "android",
@@ -56,19 +56,19 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/ahmedawaad1804/react-native-restart-newarch.git"
+    "url": "https://github.com/ahmedawaad1804/react-native-brightness-newarch.git"
   },
-  "homepage": "https://github.com/ahmedawaad1804/react-native-restart-newarch",
-  "readme": "https://github.com/ahmedawaad1804/react-native-restart-newarch#readme",
+  "homepage": "https://github.com/ahmedawaad1804/react-native-brightness-newarch",
+  "readme": "https://github.com/ahmedawaad1804/react-native-brightness-newarch#readme",
   "bugs": {
-    "url": "https://github.com/ahmedawaad1804/react-native-restart-newarch/issues"
+    "url": "https://github.com/ahmedawaad1804/react-native-brightness-newarch/issues"
   },
   "codegenConfig": {
     "name": "RNRestartSpec",
     "type": "modules",
     "jsSrcsDir": "./src",
     "android": {
-      "javaPackageName": "com.restartnewarch"
+      "javaPackageName": "com.brightnessnewarch"
     }
   },
   "devDependencies": {

@@ -1,4 +1,4 @@
-package com.restartnewarch;
+package com.brightnessnewarch;
 
 
 import com.facebook.react.bridge.NativeModule;
@@ -9,12 +9,12 @@ import com.facebook.react.TurboReactPackage;
 import java.util.HashMap;
 import java.util.Map;
 
-public class RestartNewarchPackage extends TurboReactPackage {
+public class BrightnessNewarchPackage extends TurboReactPackage {
 
     @Override
     public NativeModule getModule(String name, ReactApplicationContext reactContext) {
-        if (name.equals(RestartModuleImpl.NAME)) {
-            return new RestartModule(reactContext);
+        if (name.equals(BrightnessNewArchModuleImpl.NAME)) {
+            return new BrightnessNewArchModule(reactContext);
         }
         return null;
     }
@@ -22,7 +22,7 @@ public class RestartNewarchPackage extends TurboReactPackage {
     @Override
     public ReactModuleInfoProvider getReactModuleInfoProvider() {
         return () -> {
-            String moduleName = RestartModuleImpl.NAME;
+            String moduleName = BrightnessNewArchModuleImpl.NAME;
             boolean isTurboModule = BuildConfig.IS_NEW_ARCHITECTURE_ENABLED;
 
             Map<String, ReactModuleInfo> moduleInfos = new HashMap<>();

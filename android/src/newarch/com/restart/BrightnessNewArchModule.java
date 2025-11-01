@@ -1,4 +1,4 @@
-package com.restartnewarch;
+package com.brightnessnewarch;
 
 import android.content.Intent;
 import android.util.Log;
@@ -9,15 +9,15 @@ import com.facebook.react.bridge.ReactMethod;
 import com.facebook.react.module.annotations.ReactModule;
 import com.facebook.react.bridge.UiThreadUtil;
 import androidx.annotation.NonNull;
+import com.facebook.react.bridge.Promise;
 
-
-public class RestartModule extends NativeRestartSpec {
+public class BrightnessNewArchModule extends NativeBrightnessSpec {
 
 
 
     private final ReactApplicationContext reactContext;
 
-    public RestartModule(ReactApplicationContext reactContext) {
+    public BrightnessNewArchModule(ReactApplicationContext reactContext) {
         super(reactContext);
         this.reactContext = reactContext;
     }
@@ -25,13 +25,18 @@ public class RestartModule extends NativeRestartSpec {
     @Override
     @NonNull
     public String getName() {
-        return RestartModuleImpl.NAME;
+        return BrightnessNewArchModuleImpl.NAME;
 
     }
 
+  
     @Override
-    public void restart() {
-        RestartModuleImpl.restartApp(reactContext);
+    public void setBrightnessLevel(float brightnessLevel) {
+        BrightnessNewArchModuleImpl.setBrightnessLevel(reactContext, brightnessLevel);
+    }
+    @Override
+    public void getBrightnessLevel(Promise promise) {
+        BrightnessNewArchModuleImpl.getBrightnessLevel(reactContext, promise);
     }
 
 }

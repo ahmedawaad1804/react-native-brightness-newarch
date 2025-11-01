@@ -1,10 +1,10 @@
 # ⚡ React Native Restart (New & Old Arch ) 🚀
 
-[![npm version](https://img.shields.io/npm/v/react-native-restart-newarch.svg)](https://www.npmjs.com/package/react-native-restart-newarch)
-[![npm downloads](https://img.shields.io/npm/dm/react-native-restart-newarch.svg)](https://www.npmjs.com/package/react-native-restart-newarch)
-[![Build Status](https://github.com/ahmedawaad1804/react-native-restart-newarch/actions/workflows/ci.yml/badge.svg)](https://github.com/ahmedawaad1804/react-native-restart-newarch/actions)
-[![License](https://img.shields.io/npm/l/react-native-restart-newarch.svg)](./LICENSE)
-[![Bundlephobia](https://img.shields.io/bundlephobia/minzip/react-native-restart-newarch.svg)](https://bundlephobia.com/package/react-native-restart-newarch)
+[![npm version](https://img.shields.io/npm/v/react-native-brightness-newarch.svg)](https://www.npmjs.com/package/react-native-brightness-newarch)
+[![npm downloads](https://img.shields.io/npm/dm/react-native-brightness-newarch.svg)](https://www.npmjs.com/package/react-native-brightness-newarch)
+[![Build Status](https://github.com/ahmedawaad1804/react-native-brightness-newarch/actions/workflows/ci.yml/badge.svg)](https://github.com/ahmedawaad1804/react-native-brightness-newarch/actions)
+[![License](https://img.shields.io/npm/l/react-native-brightness-newarch.svg)](./LICENSE)
+[![Bundlephobia](https://img.shields.io/bundlephobia/minzip/react-native-brightness-newarch.svg)](https://bundlephobia.com/package/react-native-brightness-newarch)
 [![Platform](https://img.shields.io/badge/platform-react--native-blue.svg)](https://reactnative.dev)
 [![Architecture](https://img.shields.io/badge/Supports-New%20%26%20Old%20Arch-success.svg)](https://reactnative.dev/architecture/)
 
@@ -24,7 +24,7 @@ No more manually killing the app. Just call `RNRestart.restart()` and let the ma
 ## 🛠️ Installation
 
 ```sh
-npm install react-native-restart-newarch
+npm install react-native-brightness-newarch
 ```
 
 (Yeah, it's that easy!)
@@ -34,7 +34,7 @@ npm install react-native-restart-newarch
 ## 🚀 Usage
 
 ```js
-import RNRestart from "react-native-restart-newarch"; // Import package from node modules
+import RNRestart from "react-native-brightness-newarch"; // Import package from node modules
 
 // Immediately reload the React Native Bundle
 

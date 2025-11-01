@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import { View, StyleSheet, Button, Text } from "react-native";
-import RNBrightness from "react-native-restart-newarch";
+import { View, StyleSheet, Text, Button } from "react-native";
+import RNBrightness from "react-native-brightness-newarch";
 import Slider from "@react-native-community/slider";
 
 export default function App() {
@@ -14,6 +14,7 @@ export default function App() {
   }, []);
 
   const handleBrightnessChange = (value: number) => {
+    console.log("Setting Brightness Level:", value);
     setBrightnessLevel(value);
     RNBrightness.setBrightnessLevel(value);
   };
@@ -29,6 +30,23 @@ export default function App() {
         value={brightnessLevel}
         onValueChange={handleBrightnessChange}
       />
+
+      <Button
+        title="Increase Brightness Level"
+        onPress={() => {
+          if (brightnessLevel + 0.1 > 1) return;
+          setBrightnessLevel(brightnessLevel + 0.1);
+          RNBrightness.setBrightnessLevel(brightnessLevel + 0.1);
+        }}
+      />
+      <Button
+        title="Decrease Brightness Level"
+        onPress={() => {
+          if (brightnessLevel - 0.1 < 0) return;
+          setBrightnessLevel(brightnessLevel - 0.1);
+          RNBrightness.setBrightnessLevel(brightnessLevel - 0.1);
+        }}
+      />
     </View>
   );
 }
@@ -42,5 +60,7 @@ const styles = StyleSheet.create({
   slider: {
     width: 200,
     height: 40,
+    backgroundColor: "yellow",
+    zIndex: 1000,
   },
 });
