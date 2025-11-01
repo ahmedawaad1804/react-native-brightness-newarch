@@ -1,6 +1,6 @@
-interface RNRestartModule {
-  restart: () => void;
-  Restart: () => void;
+interface RNBrightnessModule {
+  getBrightnessLevel(): Promise<number>;
+  setBrightnessLevel(brightnessLevel: number): void;
 }
 
-export type { RNRestartModule };
+export type { RNBrightnessModule };

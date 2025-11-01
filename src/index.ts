@@ -1,17 +1,17 @@
-import RestartNewArch from './NativeRestart';
-import type { RNRestartModule } from './types';
+import RNBrightnessNewArch from "./NativeBrightness";
+import type { RNBrightnessModule } from "./types";
 
-export function restart(): void {
-  return RestartNewArch.restart();
+export function setBrightnessLevel(brightnessLevel: number): void {
+  return RNBrightnessNewArch.setBrightnessLevel(brightnessLevel);
 }
 
-export function Restart(): void {
-  return RestartNewArch.restart();
+export function getBrightnessLevel(): Promise<number> {
+  return RNBrightnessNewArch.getBrightnessLevel();
 }
 
-const RNRestart: RNRestartModule = {
-  restart,
-  Restart,
+const RNBrightness: RNBrightnessModule = {
+  setBrightnessLevel,
+  getBrightnessLevel,
 };
 
-export default RNRestart;
+export default RNBrightness;

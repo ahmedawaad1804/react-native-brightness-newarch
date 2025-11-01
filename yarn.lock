@@ -2575,6 +2575,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@react-native-community/slider@npm:^5.1.0":
+  version: 5.1.0
+  resolution: "@react-native-community/slider@npm:5.1.0"
+  checksum: fc9162d5bbfea4131d1844682586abcf3870ef7301ff8196f619faeb95fd099e674408b54fcb8118be7c11d2b32d0ac8d355d0b954dee68198bb017760d5019d
+  languageName: node
+  linkType: hard
+
 "@react-native/assets-registry@npm:0.74.89":
   version: 0.74.89
   resolution: "@react-native/assets-registry@npm:0.74.89"
@@ -9547,6 +9554,7 @@ __metadata:
     "@react-native-community/cli": 15.0.1
     "@react-native-community/cli-platform-android": 15.0.1
     "@react-native-community/cli-platform-ios": 15.0.1
+    "@react-native-community/slider": ^5.1.0
     "@react-native/babel-preset": 0.78.0
     "@react-native/metro-config": 0.78.0
     "@react-native/typescript-config": 0.78.0
