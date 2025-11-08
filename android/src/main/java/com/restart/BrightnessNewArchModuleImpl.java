@@ -14,26 +14,7 @@ public class BrightnessNewArchModuleImpl {
     public static final String NAME = "RNBrightnessNewArch";
     private static final String TAG = "BrightnessModule";
 
-    /**
-     * Restart the host app programmatically.
-     */
-    public static void restartApp(ReactApplicationContext reactContext) {
-        try {
-            Intent intent = reactContext
-                .getPackageManager()
-                .getLaunchIntentForPackage(reactContext.getPackageName());
-
-            if (intent != null) {
-                Intent mainIntent = Intent.makeRestartActivityTask(intent.getComponent());
-                reactContext.startActivity(mainIntent);
-                Runtime.getRuntime().exit(0);
-            } else {
-                Log.e(TAG, "Launch intent not found for package: " + reactContext.getPackageName());
-            }
-        } catch (Exception e) {
-            Log.e(TAG, "Error restarting app", e);
-        }
-    }
+   
 
     /**
      * Set screen brightness for the current window only (0.0f–1.0f).
@@ -88,26 +69,5 @@ public class BrightnessNewArchModuleImpl {
         }
     }
 
-    /**
-     * Get the system-wide brightness setting (0.0f–1.0f).
-     */
-    public static void getSystemBrightnessLevel(ReactApplicationContext reactContext, Promise promise) {
-        try {
-            Activity activity = reactContext.getCurrentActivity();
-            if (activity == null) {
-                promise.reject("NO_ACTIVITY", "No current activity found");
-                return;
-            }
-
-            int brightnessInt = Settings.System.getInt(
-                activity.getContentResolver(),
-                Settings.System.SCREEN_BRIGHTNESS
-            );
-            promise.resolve(brightnessInt / 255f);
-        } catch (Settings.SettingNotFoundException e) {
-            promise.reject("SETTING_NOT_FOUND", e);
-        } catch (Exception e) {
-            promise.reject("SYSTEM_BRIGHTNESS_ERROR", e);
-        }
-    }
+    
 }
