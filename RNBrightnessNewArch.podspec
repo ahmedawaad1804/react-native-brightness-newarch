@@ -9,7 +9,7 @@ Pod::UI.puts "[react-native-brightness-newarch] If you enjoy using react-native-
 
 
 Pod::Spec.new do |s|
-  s.name         = "RestartNewArch"
+  s.name         = "RNBrightnessNewArch"
   s.version      = package["version"]
   s.summary      = package["description"]
   s.homepage     = package["homepage"]

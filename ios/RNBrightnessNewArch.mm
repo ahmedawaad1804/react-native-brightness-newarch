@@ -12,18 +12,27 @@
 
 RCT_EXPORT_MODULE()
 
-RCT_EXPORT_METHOD(setBrightnessLevel:(float)brightnessLevel)
+RCT_EXPORT_METHOD(setBrightnessLevel:(double)brightnessLevel)
 {
-    dispatch_async(dispatch_get_main_queue(), ^{
-        [UIScreen mainScreen].brightness = brightnessLevel;
-    });
+  dispatch_async(dispatch_get_main_queue(), ^{
+    CGFloat value = fmax(0.0, fmin(brightnessLevel, 1.0));
+    [UIScreen mainScreen].brightness = value;
+  });
 }
 
-RCT_REMAP_METHOD(getBrightnessLevel,
-                 resolver:(RCTPromiseResolveBlock)resolve
-                 rejecter:(RCTPromiseRejectBlock)reject)
+
+RCT_EXPORT_METHOD(getBrightnessLevel:(RCTPromiseResolveBlock)resolve
+                  reject:(RCTPromiseRejectBlock)reject)
 {
-    resolve(@([UIScreen mainScreen].brightness));
+  resolve(@([UIScreen mainScreen].brightness));
 }
+
+#ifdef RCT_NEW_ARCH_ENABLED
+- (std::shared_ptr<facebook::react::TurboModule>)getTurboModule:
+    (const facebook::react::ObjCTurboModule::InitParams &)params
+{
+    return std::make_shared<facebook::react::NativeBrightnessSpecJSI>(params);
+}
+#endif
 
 @end

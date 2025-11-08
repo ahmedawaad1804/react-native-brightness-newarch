@@ -1,7 +1,7 @@
 {
   "name": "react-native-brightness-newarch",
-  "version": "1.0.85",
-  "description": "Restart the app for new architecture",
+  "version": "1.0.1",
+  "description": "Brightness module for new architecture",
   "license": "MIT",
   "source": "src/index.ts",
   "main": "./lib/commonjs/index.js",
@@ -17,9 +17,9 @@
   },
   "keywords": [
     "react-native",
-    "restart",
+    "brightness",
     "react-native-brightness-newarch",
-    "react-native-restart",
+    "react-native-brightness",
     "newarch",
     "android",
     "ios",
@@ -64,7 +64,7 @@
     "url": "https://github.com/ahmedawaad1804/react-native-brightness-newarch/issues"
   },
   "codegenConfig": {
-    "name": "RNRestartSpec",
+    "name": "RNBrightnessSpec",
     "type": "modules",
     "jsSrcsDir": "./src",
     "android": {

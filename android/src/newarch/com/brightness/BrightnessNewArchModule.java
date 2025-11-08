@@ -31,8 +31,8 @@ public class BrightnessNewArchModule extends NativeBrightnessSpec {
 
   
     @Override
-    public void setBrightnessLevel(float brightnessLevel) {
-        BrightnessNewArchModuleImpl.setBrightnessLevel(reactContext, brightnessLevel);
+    public void setBrightnessLevel(double brightnessLevel) {
+        BrightnessNewArchModuleImpl.setBrightnessLevel(reactContext, (float) brightnessLevel);
     }
     @Override
     public void getBrightnessLevel(Promise promise) {

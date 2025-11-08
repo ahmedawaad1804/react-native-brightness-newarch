@@ -116,7 +116,7 @@ dependencies {
 if (isNewArchitectureEnabled()) {
   react {
     jsRootDir = file("../src/")
-    libraryName = "Restart"
+    libraryName = "RNBrightnessNewArch"
     codegenJavaPackageName = "com.brightnessnewarch"
   }
 }
