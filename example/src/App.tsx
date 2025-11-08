@@ -1,7 +1,10 @@
 import { useEffect, useState } from "react";
 import { View, StyleSheet, Text, Button } from "react-native";
 import RNBrightness from "react-native-brightness-newarch";
-import Slider from "@react-native-community/slider";
+// import Slider from "@react-native-community/slider";
+const isNewArchitectureEnabled = (global as any).__turboModuleProxy != null;
+
+console.log("Is New Architecture enabled?", isNewArchitectureEnabled);
 
 export default function App() {
   const [brightnessLevel, setBrightnessLevel] = useState(0);
@@ -21,7 +24,7 @@ export default function App() {
   return (
     <View style={styles.container}>
       <Text>Brightness Level: {brightnessLevel.toFixed(2)}</Text>
-      <Slider
+      {/* <Slider
         style={styles.slider}
         minimumValue={0}
         maximumValue={1}
@@ -29,14 +32,14 @@ export default function App() {
         maximumTrackTintColor="red"
         value={brightnessLevel}
         onValueChange={handleBrightnessChange}
-      />
+      /> */}
 
       <Button
         title="Increase Brightness Level"
         onPress={() => {
           if (brightnessLevel + 0.1 > 1) return;
           setBrightnessLevel(brightnessLevel + 0.1);
-          RNBrightness.setBrightnessLevel(brightnessLevel + 0.1);
+          RNBrightness.setBrightnessLevel(20);
         }}
       />
       <Button

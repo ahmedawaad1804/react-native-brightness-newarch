@@ -20,6 +20,7 @@ export default [
         ...globals.node,
         ...globals.es2021,
         ...globals.jest,
+        __DEV__: "readonly",
       },
       parserOptions: { ecmaFeatures: { jsx: true } },
     },
