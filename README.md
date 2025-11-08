@@ -1,4 +1,4 @@
-# ⚡ React Native Restart (New & Old Arch ) 🚀
+# 💡 React Native Brightness (New & Old Arch) 🌟
 
 [![npm version](https://img.shields.io/npm/v/react-native-brightness-newarch.svg)](https://www.npmjs.com/package/react-native-brightness-newarch)
 [![npm downloads](https://img.shields.io/npm/dm/react-native-brightness-newarch.svg)](https://www.npmjs.com/package/react-native-brightness-newarch)
@@ -6,9 +6,9 @@
 [![License](https://img.shields.io/npm/l/react-native-brightness-newarch.svg)](./LICENSE)
 [![Bundlephobia](https://img.shields.io/bundlephobia/minzip/react-native-brightness-newarch.svg)](https://bundlephobia.com/package/react-native-brightness-newarch)
 [![Platform](https://img.shields.io/badge/platform-react--native-blue.svg)](https://reactnative.dev)
-[![Architecture](https://img.shields.io/badge/Supports-New%20%26%20Old%20Arch-success.svg)](https://reactnative.dev/architecture/)
+[![Architecture](https://img.shields.io/badge/Supports-New%20%26%20Old%20Architecture-success.svg)](https://reactnative.dev/architecture/)
 
-Ever wished your React Native app could **restart itself like a phoenix rising from the ashes**? 🔥 **Now it can!**
+**Easily control the screen brightness** in your React Native app — compatible with both **New and Old Architecture**! ✨
 
 ---
 
@@ -17,52 +17,67 @@ Ever wished your React Native app could **restart itself like a phoenix rising f
 - **iOS**: 12.0
 - **Android**: 21 (Lollipop)
 
-No more manually killing the app. Just call `RNRestart.restart()` and let the magic happen! 🪄✨
+Control the screen brightness without writing any native code.
 
 ---
 
 ## 🛠️ Installation
 
-```sh
+```bash
 npm install react-native-brightness-newarch
 ```
 
-(Yeah, it's that easy!)
+_No extra linking needed for modern React Native versions._
 
 ---
 
 ## 🚀 Usage
 
+Brightness values must be between `0` (minimum) and `1` (maximum).
+
 ```js
-import RNRestart from "react-native-brightness-newarch"; // Import package from node modules
+import RNBrightness from "react-native-brightness-newarch";
 
-// Immediately reload the React Native Bundle
+// Set brightness to 50%
+RNBrightness.setBrightnessLevel(0.5);
 
-RNRestart.restart(); // BOOM! Your app restarts instantly! ⚡
-// Or
-RNRestart.Restart(); // BOOM! Your app restarts instantly! ⚡
+// Get current brightness
+const current = await RNBrightness.getBrightnessLevel();
+console.log(`Current brightness is: ${current}`);
 ```
 
-This is **faster than a full reload** and **easier than debugging a state issue**.
+> ⚠️ Out-of-range values are automatically clamped between 0 and 1.
+
+---
+
+## 🧱 Architecture
+
+This module automatically detects and supports both:
+
+- **New Architecture** (Fabric + TurboModules)
+- **Old Architecture** (Paper)
+
+No configuration needed — it just works.
 
 ---
 
 ## 🧐 Why Use This?
 
-✅ **Supports the New Architecture** (TurboModules FTW!)
-✅ **Supports the Old Architecture** (Backward Compatible)
-✅ **No Native Code Tweaks Needed** (Plug & Play)
-✅ **Instant Restart** (Goodbye, manual reloading)
-✅ **Perfect for Feature Toggles** (Change configs & restart on the fly!)
+✅ Supports the **New Architecture** (TurboModules Ready)  
+✅ Fully **Backward Compatible**  
+✅ **No Native Tweaks** required (Plug & Play)  
+✅ Simple, **Cross-Platform API**  
+✅ Lightweight and **Zero Dependencies**
 
 ---
 
 ## 🤝 Contributing
 
-We welcome PRs, issues, and ideas! See the [contributing guide](CONTRIBUTING.md) for details.
+We welcome pull requests, issues, and ideas!  
+See the [contributing guide](CONTRIBUTING.md) for details.
 
 ---
 
 ## 📜 License
 
-MIT
+[MIT](./LICENSE)
