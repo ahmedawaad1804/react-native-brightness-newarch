@@ -16,11 +16,11 @@ export default function App() {
     });
   }, []);
 
-  const handleBrightnessChange = (value: number) => {
-    console.log("Setting Brightness Level:", value);
-    setBrightnessLevel(value);
-    RNBrightness.setBrightnessLevel(value);
-  };
+  // const handleBrightnessChange = (value: number) => {
+  //   console.log("Setting Brightness Level:", value);
+  //   setBrightnessLevel(value);
+  //   RNBrightness.setBrightnessLevel(value);
+  // };
   return (
     <View style={styles.container}>
       <Text>Brightness Level: {brightnessLevel.toFixed(2)}</Text>
